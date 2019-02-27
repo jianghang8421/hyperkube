@@ -14,7 +14,7 @@ steps:
       password:
         from_secret: dockerhub_password
       dockerfile: Dockerfile
-      repo: rancher/hyperkube
+      repo: jianghang8421/hyperkube
       tag: "${DRONE_TAG}-amd64"
     when:
       event:
@@ -36,7 +36,7 @@ steps:
       password:
         from_secret: dockerhub_password
       dockerfile: Dockerfile.arm64
-      repo: rancher/hyperkube
+      repo: jianghang8421/hyperkube
       tag: "${DRONE_TAG}-arm64"
     when:
       event:
@@ -53,8 +53,8 @@ steps:
         from_secret: dockerhub_username
       password:
         from_secret: dockerhub_password
-      target: "rancher/hyperkube:${DRONE_TAG}"
-      template: "rancher/hyperkube:${DRONE_TAG}-ARCH"
+      target: "jianghang8421/hyperkube:${DRONE_TAG}"
+      template: "jianghang8421/hyperkube:${DRONE_TAG}-ARCH"
       platforms:
         - linux/amd64
         - linux/arm64
